@@ -3,4 +3,4 @@ Welcome to <a href="https://www.youtube.com/channel/UCyN0ucRF1LoHBHYsjBWfbpw"> C
 One stop for solutions to programming interview questions. Questions are collected from popular websites such as leetcode.
 
 Files are named in the following way:
-lcxxxx.cs ==> xxx is the question number from leetcode.
+lcxxxx.cs ==> xxxx is the question number from leetcode.
