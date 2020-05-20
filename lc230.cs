@@ -26,7 +26,7 @@ public class Solution {
     }
     private void TraverseInorderWithSpace(TreeNode tn,List<int> l)
     {
-        if(tn=null)
+        if(tn==null)
             return;
         TraverseInorderWithSpace(tn.left,l);
         l.Add(tn.val);
