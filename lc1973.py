@@ -15,7 +15,6 @@ class Solution:
         rightSum = self.recur(root.right)
         if root.val == leftSum + rightSum:
             self.ans += 1
-        #print("at ",root.val, leftSum + rightSum)
         return root.val + leftSum + rightSum
     
     def equalToDescendants(self, root: Optional[TreeNode]) -> int:
