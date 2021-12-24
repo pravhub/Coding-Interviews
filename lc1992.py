@@ -1,3 +1,5 @@
+# leetcode problem 1992
+#https://leetcode.com/problems/find-all-groups-of-farmland
 class Solution:
     
     def traverseAlongCol(self, land: List[List[int]], visited: List[List[bool]], row: int, col:int) -> int:        
