@@ -7,27 +7,27 @@ class Solution:
         j = len(plants)-1
         alice = capacityA
         bob = capacityB
-        while(i <= j):
-            if(i == j):
-                if(alice >= bob):
-                    if(plants[i] > alice):
-                        refill += 1
-                        alice = capacityA
-                    alice -= plants[i]
-                else: #(alice < bob):
-                    if(plants[j] > bob):
-                        refill += 1
-                        bob = capacityB
-                    bob -= plants[j]
-            else:                            
+        while(i < j):
+            if(plants[i] > alice):
+                refill += 1
+                alice = capacityA
+            alice -= plants[i]
+            if(plants[j] > bob):
+                refill += 1
+                bob = capacityB
+            bob -= plants[j]
+            i += 1
+            j -= 1
+            
+        if(i == j):
+            if(alice >= bob):
                 if(plants[i] > alice):
                     refill += 1
                     alice = capacityA
                 alice -= plants[i]
+            else: #(alice < bob):
                 if(plants[j] > bob):
                     refill += 1
                     bob = capacityB
                 bob -= plants[j]
-            i += 1
-            j -= 1
         return refill
