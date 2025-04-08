@@ -18,4 +18,26 @@ public class Solution {
         else
             return 0;
     }
+    public int MaxDepthIterative(TreeNode root) {
+        if(root == null)
+            return 0;
+        Queue<TreeNode> nodes = new Queue<TreeNode>();
+        nodes.Enqueue(root);
+        int depth = 0;
+        while(nodes.Count > 0)
+        {
+            var nextLevel = new Queue<TreeNode>();
+            while(nodes.Count > 0)
+            {
+                TreeNode n = nodes.Dequeue();
+                if(n.left != null)
+                    nextLevel.Enqueue(n.left);
+                if(n.right != null)
+                    nextLevel.Enqueue(n.right);
+            }
+            nodes = nextLevel;
+            depth += 1;
+        }
+        return depth;
+    }
 }
